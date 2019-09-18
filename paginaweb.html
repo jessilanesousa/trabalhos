@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <meta charset="utf-8">
+	<title>Pagina Web</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<nav id="menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="paginaweb.html">Formularios</a></li>
+        <li><a href="calculadora_hora.html">Cauculadora</a></li>
+        <li><a href="jdv.html">Jogo da velha</a></li>
+       
+    </ul>
+</nav>
+<br>
+<br><br>
+<br>
+<div id="area">
+<form action="pagina de ação" method="post" name="dados"
+onSubmit="return enviardados();" id="formulario">
+
+  <table width="588" border="0" align="left" >
+  	<h2> Formulario de Cadastro! </h2>
+  	<br>
+    <tr>
+
+      <td width="118"><font size="3" face="Verdana, Arial, Helvetica, sans-serif">Nome completo:</font></td>
+      <td width="460">
+    <input name="tx_nome" type="text" class="formbutton"  id="tx_nome" size="52" maxlength="150">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      	<font size="3" face="Verdana, Arial, Helvetica, sans-serif">E-mail:</font></td>
+      <td>
+      	<font size="2">
+        <input name="tx_email" type="text" id="tx_email" size="52" maxlength="150" class="formbutton">
+      </font>
+  </td>
+    </tr>
+    <tr>
+      <td><font face="Verdana, Arial, Helvetica, sans-serif"><font size="3">Mensagem<strong>:
+      </strong>
+  </font>
+</font>
+</td>
+      <td rowspan="2"><font size="2">
+        <textarea name="tx_mensagem" cols="50" rows="8" class="formbutton" id="tx_mensagem" input ></textarea>
+      </font></td>
+    </tr>
+    <tr>
+      <td height="85"><p><strong><font face="Verdana, Arial, Helvetica, sans-serif"><font size="1">
+      </font>
+  </font>
+</strong>
+</p>
+</td>
+    </tr>
+    <tr>
+      <td height="22"></td>
+      <td>
+        <input name="Submit" type="submit"  class="formobjects"
+        value="Enviar dados">
+  
+        
+      </td>
+    </tr>
+  </table>
+</form>    
+<div>
+ <script type="text/javascript" src="scritp.js"></script>
+</body>
+</html>

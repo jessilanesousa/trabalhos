@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>
+   Cauculadora
+     </title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <style type="text/css">
+    
+ #button1 {
+  background-color:#008080; color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  } 
+     </style>
+     <nav id="menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="paginaweb.html">Formularios</a></li>
+        <li><a href="calculadora_hora.html">Caculadora</a></li>
+        <li><a href="jdv.html">Jogo da velha</a></li>
+       
+    </ul>
+</nav>
+<br>
+<br><br>
+<br>
+  </head>
+  <body>
+    <h3>
+    Entre com o primeiro valor:</h3>
+   <input type="text" id="v1"size="3"> </input><br><br>
+  <h3> Entre com o segundo valor:</h3>
+ <input type="text" id="v2" size="3"> </input><br>
+<br>
+
+   <button id="button1" onclick="Soma()">Soma +</button>
+      <button id="button1" onclick="Sobritacao()">Sobritação - </button>
+<button id="button1" onclick="Divisao()">Divisão % </button>
+<button id="button1" onclick="Mutiplicacao()">Mutiplicacão * </button>
+    <!--  <button onmouseover="Soma()">Soma</button>-->
+<br>
+<br>
+<br>
+<br>
+
+   <h3 id="res">Resposta:</h3>
+   <br>
+<br>
+ <h2> Data e Hora Local:</h2>
+
+   <div>
+      <output id="data" style="font-family: 'arial black', 'avant garde'; font-size: 15px;"></output>
+    </div>
+    <div>
+      <output id="hora" style="font-family: 'arial black', 'avant garde'; font-size: 15px;"></output>       
+    </div>  
+</body>
+<script>
+    function atualizaRelogio(){ 
+      var momentoAtual = new Date();
+      
+      var vhora = momentoAtual.getHours();
+      var vminuto = momentoAtual.getMinutes();
+      var vsegundo = momentoAtual.getSeconds();
+      
+      var vdia = momentoAtual.getDate();
+      var vmes = momentoAtual.getMonth() + 1;
+      var vano = momentoAtual.getFullYear();
+      
+      if (vdia < 10){ vdia = "0" + vdia;}
+      if (vmes < 10){ vmes = "0" + vmes;}
+      if (vhora < 10){ vhora = "0" + vhora;}
+      if (vminuto < 10){ vminuto = "0" + vminuto;}
+      if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+ 
+      dataFormat = vdia + " / " + vmes + " / " + vano;
+      horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+ 
+      document.getElementById("data").innerHTML = dataFormat;
+      document.getElementById("hora").innerHTML = horaFormat;
+ 
+      setTimeout("atualizaRelogio()",1000);
+    }
+  </script> 
+   <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+      jQuery(window).load(function($){
+        atualizaRelogio();
+      });
+    </script>
+
+<!--    soma de valore em javascript -->
+    <script type="text/javascript">
+    function Soma(argument) {
+    var valor1 = parseInt(document.getElementById('v1').value);
+    var valor2 = parseInt(document.getElementById('v2').value);
+             
+    document.getElementById('res').innerHTML = "Resposta: "+ (valor1+valor2);
+         }
+          function Sobritacao(argument) {
+    var valor1 = parseInt(document.getElementById('v1').value);
+    var valor2 = parseInt(document.getElementById('v2').value);
+             
+    document.getElementById('res').innerHTML = "Resposta: "+ (valor1-valor2);
+         }
+    function Divisao(argument) {
+    var valor1 = parseInt(document.getElementById('v1').value);
+    var valor2 = parseInt(document.getElementById('v2').value);
+             
+    document.getElementById('res').innerHTML = "Resposta: "+ (valor1/valor2);
+         }
+         function Mutiplicacao(argument) {
+    var valor1 = parseInt(document.getElementById('v1').value);
+    var valor2 = parseInt(document.getElementById('v2').value);
+             
+    document.getElementById('res').innerHTML = "Resposta: "+ (valor1*valor2);
+         }
+    </script>
+</html>

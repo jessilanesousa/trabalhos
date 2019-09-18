@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	
+<title>Jogo da Velha</title>
+
+<style type="text/css">
+
+
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#EDEDED;
+    list-style:none;
+}
+#menu ul li { display: inline;
+ }
+#menu ul li a {
+    padding: 10px 100px;
+    display: inline-block;
+
+    background-color:#EDEDED;
+    color: #333;
+    text-decoration: none;
+    border-bottom:3px solid #EDEDED;
+}
+#menu ul li a:hover {
+    background-color:#D6D6D6;
+    color: #6D6D6D;
+    border-bottom:3px solid #EA0000;
+}
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(img/border.png) 30 stretch;
+}
+	
+#mostrador{
+  margin: auto;
+  margin-top: 40px;
+  width: 252px;
+  height: 80px;
+
+}
+  .espaco{
+	width:80px;
+    height: 60px;
+	border:2px solid #000;			
+   float: left;
+   text-align: center;
+  padding-top: 20px;
+
+ }
+
+.tabuleiro{
+	width: 252px;
+    height: 252px;
+    margin: auto;
+}
+.button1 {background-color:#008CBA; color: white;
+	font-size: 20px;
+	padding: 10px 24px;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	} 
+body {
+  background-image: url("img/fundo.png");
+}
+</style>
+</head>
+<body>
+	 <nav id="menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="paginaweb.html">Formularios</a></li>
+        <li><a href="calculadora_hora.html">Caculadora</a></li>
+        <li><a href="jdv.html">Jogo da velha</a></li>
+    
+    </ul>
+</nav>
+<center >
+<div id="mostrador">
+		
+<p style="float: left; margin-right: 10px;">Vez do Jogador:</p>
+	
+	<img src="" border="0" height="50">
+
+	</div>
+
+	<div id="borderimg"class="tabuleiro">
+		
+<div id="a1" class="espaco" jogada=""></div>
+	
+	<div id="a2" class="espaco" jogada=""></div>
+	
+	<div id="a3" class="espaco" jogada=""></div>
+
+		
+<div id="b1" class="espaco" jogada=""></div>
+		
+<div id="b2" class="espaco" jogada=""></div>
+		
+<div id="b3" class="espaco" jogada=""></div>
+		
+	
+	<div id="c1" class="espaco" jogada=""></div>
+	
+	<div id="c2" class="espaco" jogada=""></div>
+		
+<div id="c3" class="espaco" jogada=""></div>
+
+	
+</div>
+
+
+<script type="text/javascript" src="game.js">
+</script>
+
+
+<br><br>
+<a  href="jdv.html"><button class="button1">Jogar Novamente!</button></a>
+
+
+</center>
+</body>
+
+</html>
